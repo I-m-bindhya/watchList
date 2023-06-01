@@ -1,0 +1,39 @@
+.btn-modal{
+  opacity: 0;
+  position: absolute;
+  margin-left: 65px
+}
+
+tr:hover{
+  .btn-modal{
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 650px)  {
+  .btn-modal{
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .modal{
+    font-size: 12px;
+  }
+
+  .mat-form-field{
+    width:25vw;
+  }
+  .modal-dialog{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    margin: 0;
+ }
+ .mat-tab-body {
+    margin: 5px;
+ }
+}

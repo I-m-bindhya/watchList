@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@mdi/font/scss/materialdesignicons";
+@import '~@angular/material/theming';
+
+$danger: #f4511e;
+@import "~node_modules/bootstrap/scss/bootstrap";
+
+@include mat-core();
+
+  $primary: mat-palette($mat-blue,600);
+  $accent: mat-palette($mat-grey, 50);
+  $warn: mat-palette($mat-orange, 500);
+
+  $theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+html, body { height: 100%; font-size: calc(12px + 0.390625vw);}
+body { margin: 0; font-family: Poppins, Roboto, "Helvetica Neue", sans-serif; }
+
+
+// button
+button {
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.modal-footer button{
+  min-width: 77px;
+}
+
+// Form field
+.form-control:focus {
+  border-color: rgb(206 206 206);
+  box-shadow: 0 0 0 0.25rem rgba(214, 215, 216, 0.25);
+}
+
+.input-group-text {
+  border-radius: 0;
+}
+
+// Model dialog box
+
+.modal .modal-dialog .modal-content {
+  .modal-header{
+    color: white;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal-footer{
+    background-color: whitesmoke;
+  }
+}
+
+// Mat-tab-body
+.mat-tab-body {
+  margin: 20px;
+
+  .mat-tab-body-content {
+    overflow: hidden;
+  }
+}
+
+// Radio button
+
+.mat-radio-button{
+  margin-left: 10px;
+  .mat-radio-label .mat-radio-container {
+    height: 15px;
+    width: 15px;
+    .mat-radio-inner-circle, .mat-radio-outer-circle{
+      height:15px;
+      width:15px;
+    }
+  }
+
+  .mat-radio-ripple{
+    height: 10px;
+    width: 10px;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width:500px) {
+ .mat-tab-body {
+    margin: 5px;
+ }
+}
+
+
+
+
+
